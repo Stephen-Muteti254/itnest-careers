@@ -1,0 +1,201 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* AcademicHub Careers Design System
+   Colors: Sage #b4b8ab, Navy #153243, Steel Blue #284b63, Cream #f4f9e9, Light Gray #eef0eb
+*/
+
+@layer base {
+  :root {
+    /* Core palette - HSL values */
+    --sage: 80 6% 69%;
+    --navy: 203 50% 17%;
+    --steel-blue: 205 43% 27%;
+    --cream: 83 47% 95%;
+    --light-gray: 90 11% 93%;
+
+    /* Semantic tokens */
+    --background: 83 47% 95%;
+    --foreground: 203 50% 17%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 203 50% 17%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 203 50% 17%;
+
+    --primary: 205 43% 27%;
+    --primary-foreground: 83 47% 95%;
+
+    --secondary: 80 6% 69%;
+    --secondary-foreground: 203 50% 17%;
+
+    --muted: 90 11% 93%;
+    --muted-foreground: 203 30% 40%;
+
+    --accent: 205 43% 27%;
+    --accent-foreground: 83 47% 95%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 80 6% 75%;
+    --input: 0 0% 100%;
+    --ring: 205 43% 27%;
+
+    --radius: 0.75rem;
+
+    /* Sidebar tokens */
+    --sidebar-background: 203 50% 17%;
+    --sidebar-foreground: 83 47% 95%;
+    --sidebar-primary: 205 43% 27%;
+    --sidebar-primary-foreground: 83 47% 95%;
+    --sidebar-accent: 203 50% 25%;
+    --sidebar-accent-foreground: 83 47% 95%;
+    --sidebar-border: 203 50% 25%;
+    --sidebar-ring: 205 43% 27%;
+
+    /* Custom gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(80 6% 69%) 0%, hsl(83 47% 95%) 50%, hsl(205 43% 27% / 0.2) 100%);
+    --gradient-card: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(90 11% 93%) 100%);
+    --gradient-primary: linear-gradient(135deg, hsl(205 43% 27%) 0%, hsl(203 50% 17%) 100%);
+
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 hsl(203 50% 17% / 0.05);
+    --shadow-md: 0 4px 6px -1px hsl(203 50% 17% / 0.1), 0 2px 4px -2px hsl(203 50% 17% / 0.1);
+    --shadow-lg: 0 10px 15px -3px hsl(203 50% 17% / 0.1), 0 4px 6px -4px hsl(203 50% 17% / 0.1);
+    --shadow-xl: 0 20px 25px -5px hsl(203 50% 17% / 0.1), 0 8px 10px -6px hsl(203 50% 17% / 0.1);
+    --shadow-primary: 0 4px 14px 0 hsl(205 43% 27% / 0.4);
+  }
+
+  .dark {
+    --background: 203 50% 17%;
+    --foreground: 83 47% 95%;
+
+    --card: 203 50% 22%;
+    --card-foreground: 83 47% 95%;
+
+    --popover: 203 50% 22%;
+    --popover-foreground: 83 47% 95%;
+
+    --primary: 205 43% 40%;
+    --primary-foreground: 83 47% 95%;
+
+    --secondary: 203 50% 25%;
+    --secondary-foreground: 83 47% 95%;
+
+    --muted: 203 50% 25%;
+    --muted-foreground: 80 6% 75%;
+
+    --accent: 205 43% 40%;
+    --accent-foreground: 83 47% 95%;
+
+    --destructive: 0 62.8% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 203 50% 30%;
+    --input: 203 50% 25%;
+    --ring: 205 43% 40%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  /* Thin scrollbar - consistent throughout */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: hsl(var(--muted-foreground)) transparent;
+  }
+
+  *::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: hsl(var(--muted-foreground) / 0.3);
+    border-radius: 3px;
+  }
+
+  *::-webkit-scrollbar-thumb:hover {
+    background-color: hsl(var(--muted-foreground) / 0.5);
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .gradient-hero {
+    background: var(--gradient-hero);
+  }
+
+  .gradient-card {
+    background: var(--gradient-card);
+  }
+
+  .gradient-primary {
+    background: var(--gradient-primary);
+  }
+
+  .shadow-primary {
+    box-shadow: var(--shadow-primary);
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-out forwards;
+  }
+
+  .animate-slide-up {
+    animation: slideUp 0.5s ease-out forwards;
+  }
+
+  .animate-scale-in {
+    animation: scaleIn 0.3s ease-out forwards;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
