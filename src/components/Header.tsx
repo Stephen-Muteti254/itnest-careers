@@ -45,11 +45,6 @@ export const Header = () => {
               {link.label}
             </Link>
           ))}
-          {/*{!isAdmin && (
-            <Button asChild variant="default" size="sm">
-              <Link to="/admin">Admin Portal</Link>
-            </Button>
-          )}*/}
         </nav>
 
         {/* Mobile Menu Button */}
@@ -84,15 +79,6 @@ export const Header = () => {
                 {link.label}
               </Link>
             ))}
-            {!isAdmin && (
-              <Link
-                to="/admin"
-                onClick={() => setMobileMenuOpen(false)}
-                className="px-4 py-2 text-sm font-medium bg-primary text-primary-foreground rounded-md"
-              >
-                Admin Portal
-              </Link>
-            )}
           </nav>
         </div>
       )}
