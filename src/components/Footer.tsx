@@ -9,15 +9,15 @@ export const Footer = () => {
           {/* Brand */}
           <div className="md:col-span-2">
             <Link to="/" className="flex items-center gap-2 mb-4">
-              <img src={logoLight} alt="AcademicHub" className="h-8 w-8" />
+              <img src={logoLight} alt="itnest" className="h-8 w-8" />
               <span className="text-lg font-bold text-foreground">
-                AcademicHub <span className="text-primary">Careers</span>
+                itnest <span className="text-primary">Careers</span>
               </span>
             </Link>
             <p className="text-sm text-muted-foreground max-w-md">
-              Join our mission to advance academic excellence worldwide. We're
-              building the future of academic support, one talented team member
-              at a time.
+              Join our mission to build innovative technology solutions for businesses
+worldwide. We're creating scalable, secure, and impactful digital systems—
+one talented team member at a time.
             </p>
           </div>
 
@@ -32,12 +32,12 @@ export const Footer = () => {
               </li>
               <li>
                 <Link to="/jobs" className="hover:text-primary transition-colors">
-                  Open Positions
+                  Open Roles
                 </Link>
               </li>
               <li>
                 <a
-                  href="https://academichubpro.com"
+                  href="https://itnest.org"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-primary transition-colors"
@@ -52,16 +52,16 @@ export const Footer = () => {
           <div>
             <h4 className="font-semibold mb-4">Contact</h4>
             <ul className="space-y-2 text-sm text-muted-foreground">
-              <li>support@academichubpro.com</li>
-              <li>575 5th Ave Fl 14
-                New York City, New York
+              <li>support@itnest.org</li>
+              <li>
+                Nairobi, Kenya
               </li>
             </ul>
           </div>
         </div>
 
         <div className="mt-8 pt-8 border-t border-border text-center text-sm text-muted-foreground">
-          <p>© {new Date().getFullYear()} AcademicHub. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} itnest. All rights reserved.</p>
         </div>
       </div>
     </footer>

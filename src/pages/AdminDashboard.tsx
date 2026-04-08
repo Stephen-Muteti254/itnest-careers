@@ -29,7 +29,7 @@ const AdminDashboard = () => {
     type: "full-time",
     salary: "",
     description: "",
-    whoWeAre: "AcademicHub is a leading platform dedicated to advancing academic excellence. We connect scholars, researchers, and students with the resources they need to succeed.",
+    whoWeAre: "itnest is a professional IT consultancy delivering innovative technology solutions to businesses worldwide. We specialize in web development, system architecture, cloud solutions, and digital transformation.",
     whatWeLookFor: "",
     qualifications: [],
     responsibilities: [],
@@ -206,7 +206,7 @@ const AdminDashboard = () => {
             <div>
               <h1 className="text-3xl font-bold">Admin Dashboard</h1>
               <p className="text-muted-foreground">
-                Manage job postings and applications
+                Manage IT roles, job postings, and candidate applications
               </p>
             </div>
             <div className="flex gap-3">
@@ -451,7 +451,7 @@ const AdminDashboard = () => {
                     ) : jobs.length === 0 ? (
                       <tr>
                         <td colSpan={6} className="text-center py-8 text-muted-foreground">
-                          No jobs found
+                          No job postings available
                         </td>
                       </tr>
                     ) : (

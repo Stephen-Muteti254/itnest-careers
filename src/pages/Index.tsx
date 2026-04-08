@@ -23,22 +23,22 @@ const Index = () => {
     {
       icon: Target,
       title: "Excellence",
-      description: "We strive for the highest standards in everything we do, from research to customer service.",
+      description: "We deliver high-quality, scalable IT solutions that exceed client expectations.",
     },
     {
       icon: Users,
       title: "Collaboration",
-      description: "We believe great work happens when diverse minds come together with shared purpose.",
+      description: "We work closely with clients and teams to build solutions that truly solve problems.",
     },
     {
       icon: Award,
       title: "Integrity",
-      description: "We uphold academic honesty and ethical practices as the foundation of our work.",
+      description: "We maintain transparency, security, and ethical standards in every project we handle.",
     },
     {
       icon: Heart,
       title: "Impact",
-      description: "We're driven by the positive difference we make in students' and scholars' lives.",
+      description: "We build technology that drives real business growth and digital transformation.",
     },
   ];
 
@@ -86,11 +86,11 @@ const Index = () => {
             <div className="max-w-2xl animate-fade-in">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6">
                 Shape the Future of{" "}
-                <span className="text-primary">Academic Excellence</span>
+                <span className="text-primary">Technology & Innovation</span>
               </h1>
               <p className="text-lg md:text-xl text-muted-foreground mb-8">
-                Join a team of passionate educators, researchers, and innovators
-                dedicated to empowering academic success worldwide.
+                Join a team of engineers, designers, and innovators building cutting-edge
+technology solutions for businesses around the world.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button asChild size="lg" className="shadow-primary">
@@ -112,7 +112,7 @@ const Index = () => {
           <div className="container max-w-screen-xl">
             <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-10">
               <div>
-                <h2 className="text-3xl font-bold mb-2">Featured Opportunities</h2>
+                <h2 className="text-3xl font-bold mb-2">Open Positions</h2>
                 <p className="text-muted-foreground">
                   Discover roles where you can make a real impact
                 </p>
@@ -154,11 +154,11 @@ const Index = () => {
             <div className="max-w-3xl mx-auto text-center mb-16">
               <h2 className="text-3xl font-bold mb-4">Who We Are</h2>
               <p className="text-lg text-muted-foreground">
-                AcademicHub is a leading platform dedicated to advancing academic
-                excellence. We connect scholars, researchers, and students with
-                the resources they need to succeed. Our mission is to democratize
-                access to quality academic support while maintaining the highest
-                standards of integrity and professionalism.
+                itnest is a professional IT consultancy dedicated to delivering innovative
+technology solutions. We help businesses leverage modern tools, scalable
+systems, and secure architectures to drive growth and efficiency. Our mission
+is to simplify complex technology and make it accessible, reliable, and impactful
+for organizations worldwide.
               </p>
             </div>
 

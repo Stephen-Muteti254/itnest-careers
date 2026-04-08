@@ -51,12 +51,12 @@ const JobDetail = () => {
         <Header />
         <main className="flex-1 flex items-center justify-center">
           <div className="text-center">
-            <h1 className="text-2xl font-bold mb-4">Job Not Found</h1>
+            <h1 className="text-2xl font-bold mb-4">Role Not Found</h1>
             <p className="text-muted-foreground mb-6">
-              The position you're looking for doesn't exist or has been removed.
+              The role you're looking for doesn't exist or may have been removed.
             </p>
             <Button asChild>
-              <Link to="/jobs">View All Positions</Link>
+              <Link to="/jobs">View All Jobs</Link>
             </Button>
           </div>
         </main>
@@ -84,7 +84,7 @@ const JobDetail = () => {
             className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground mb-6 transition-colors"
           >
             <ArrowLeft className="h-4 w-4" />
-            Back to all positions
+            Back to all jobs
           </Link>
 
           <div className="grid gap-8 lg:grid-cols-3">
@@ -126,7 +126,7 @@ const JobDetail = () => {
 
               {/* About the Role */}
               <div className="bg-card p-6 md:p-8 rounded-lg border">
-                <h2 className="text-xl font-semibold mb-4">About the Role</h2>
+                <h2 className="text-xl font-semibold mb-4">Role Overview</h2>
                 <p className="text-muted-foreground">{job.description}</p>
               </div>
 
@@ -134,7 +134,7 @@ const JobDetail = () => {
               <div className="bg-card p-6 md:p-8 rounded-lg border">
                 <div className="flex items-center gap-2 mb-4">
                   <Users className="h-5 w-5 text-primary" />
-                  <h2 className="text-xl font-semibold">Who We Are</h2>
+                  <h2 className="text-xl font-semibold">About itnest</h2>
                 </div>
                 <p className="text-muted-foreground">{job.whoWeAre}</p>
               </div>
@@ -143,7 +143,7 @@ const JobDetail = () => {
               <div className="bg-card p-6 md:p-8 rounded-lg border">
                 <div className="flex items-center gap-2 mb-4">
                   <Target className="h-5 w-5 text-primary" />
-                  <h2 className="text-xl font-semibold">What We Look For</h2>
+                  <h2 className="text-xl font-semibold">What We're Looking For</h2>
                 </div>
                 <p className="text-muted-foreground">{job.whatWeLookFor}</p>
               </div>
@@ -181,7 +181,7 @@ const JobDetail = () => {
 
               {/* Application Form */}
               <div id="apply">
-                <h2 className="text-2xl font-bold mb-6">Apply for this Position</h2>
+                <h2 className="text-2xl font-bold mb-6">Apply for this role</h2>
                 <ApplicationForm jobId={job.id} jobTitle={job.title} />
               </div>
             </div>
@@ -191,12 +191,12 @@ const JobDetail = () => {
               <div className="sticky top-24 space-y-6">
                 {/* Quick Apply Card */}
                 <div className="bg-card p-6 rounded-lg border">
-                  <h3 className="font-semibold mb-4">Interested in this role?</h3>
+                  <h3 className="font-semibold mb-4">Interested in this opportunity?</h3>
                   <Button asChild className="w-full shadow-primary" size="lg">
                     <a href="#apply">Apply Now</a>
                   </Button>
                   <p className="text-xs text-muted-foreground text-center mt-3">
-                    Applications are reviewed within 5-7 business days
+                    We typically review applications within 3–5 business days
                   </p>
                 </div>
 
