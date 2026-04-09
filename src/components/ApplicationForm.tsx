@@ -110,6 +110,12 @@ export const ApplicationForm = ({ jobId, jobTitle, onSuccess }: ApplicationFormP
     );
   };
 
+
+  const formatDate = (date: string) => {
+    if (!date) return null;
+    return date.length === 7 ? `${date}-01` : date;
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
@@ -121,8 +127,16 @@ export const ApplicationForm = ({ jobId, jobTitle, onSuccess }: ApplicationFormP
         email: formData.email,
         resume: formData.resume!,
         coverLetter: formData.coverLetter!,
-        experiences,
-        education,
+        experiences: experiences.map(exp => ({
+          ...exp,
+          startDate: formatDate(exp.startDate),
+          endDate: exp.current ? null : formatDate(exp.endDate),
+        })),
+        education: education.map(edu => ({
+          ...edu,
+          startDate: formatDate(edu.startDate),
+          endDate: edu.current ? null : formatDate(edu.endDate),
+        })),
       };
 
       await applicationsApi.submit(payload);
