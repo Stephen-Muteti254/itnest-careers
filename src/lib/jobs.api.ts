@@ -4,6 +4,7 @@ import { Job } from "@/types";
 export const jobsApi = {
   getAll: async () => {
     const res = await api.get("/jobs");
+    console.log(res);
     return res.data.jobs; // adjust to backend response structure
   },
 
